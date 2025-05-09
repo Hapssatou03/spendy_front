@@ -1,0 +1,72 @@
+.login-container {
+    background-color: #FCC4C7;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .login-form .title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff4f9b;
+    margin-bottom: 1.5rem;
+  }
+  
+  .login-form label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #333;
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  .submit-button {
+    padding: 12px 32px;
+    background-color: #F85FA4;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: 2px solid #cc4a8e;
+    border-radius: 9999px;
+    margin: 0 auto;              /* Centre horizontalement */
+    display: block;              /* Nécessaire avec auto margin */
+    min-width: 200px;          /* Adapte à la taille du contenu */
+    transition: background-color 0.2s ease;
+    box-shadow: none !important; /* Supprime effet 3D */
+    transform: none !important;  /* Supprime le déplacement */
+  }
+  
+  .submit-button:hover {
+    background-color: #e14d93;
+  }
+  
+  .submit-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  
+  .error-message {
+    color: red;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  

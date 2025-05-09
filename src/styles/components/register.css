@@ -1,0 +1,71 @@
+/* styles/components/register.css */
+
+.register-container {
+    @apply min-h-screen flex items-center justify-center p-4;
+    background-color: #FCC4C7; /* 🌸 Rose Spendy */
+  }
+  
+  
+  .register-form {
+    @apply bg-white rounded-lg shadow-lg p-8 w-full max-w-md;
+  }
+  
+  .title {
+    @apply text-2xl font-bold text-center mb-6;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="date"],
+  input[type="tel"] {
+    @apply w-full p-2 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pink-400;
+  }
+  
+  .legal-check {
+    @apply text-sm text-gray-700 mb-4 flex items-start gap-2;
+  }
+  
+  .legal-check input[type="checkbox"] {
+    @apply mt-1;
+  }
+  
+  .link {
+    @apply text-pink-600 hover:underline;
+  }
+  
+  .submit-button {
+    padding: 12px 32px;
+    background-color: #F85FA4;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: 2px solid #cc4a8e;
+    border-radius: 9999px;
+    margin: 0 auto;              /* Centre horizontalement */
+    display: block;              /* Nécessaire avec auto margin */
+    width: fit-content;          /* Adapte à la taille du contenu */
+    transition: background-color 0.2s ease;
+    box-shadow: none !important; /* Supprime effet 3D */
+    transform: none !important;  /* Supprime le déplacement */
+  }
+  
+  .submit-button:hover {
+    background-color: #e14d93;
+  }
+  
+  .submit-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  
+  
+  .switch-auth {
+    @apply text-center text-sm mt-4;
+  }
+  
+  .error-message {
+    @apply text-red-500 text-sm mb-4 text-center;
+  }
+  

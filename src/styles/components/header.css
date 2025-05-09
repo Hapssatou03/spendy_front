@@ -1,0 +1,74 @@
+.header {
+    background-color: #fcc4c7;
+    height: 80px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+  
+  /* Logo à gauche */
+  .header-left {
+    display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  }
+  
+  .header-logo {
+    height: 200px;
+    width: auto;
+    object-fit: contain;
+  
+  }
+  
+  /* Menu centré */
+  .nav-menu {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  /* Boutons à droite */
+  .header-buttons {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  
+  .btn-grey {
+    background-color: #eee;
+    color: black;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    border: 2px solid #aaa;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .btn-orange {
+    background-color: #ffa07a;
+    color: black;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  

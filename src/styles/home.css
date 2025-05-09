@@ -1,0 +1,106 @@
+.home-wrapper {
+    background: linear-gradient(to bottom, #fbb6ce, #fcc4c7);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  .home-nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .home-nav a {
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .btn-outline {
+    background-color: #eee;
+    border: 2px solid #aaa;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  
+  .btn-filled {
+    background-color: #FFA07A;
+    color: black;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+  }
+  
+  .home-main {
+    flex: 1;
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .home-left h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .home-left p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-start {
+    background-color: #FFA07A;
+    color: black;
+    font-weight: bold;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    border: 2px solid #d68066;
+    text-decoration: none;
+  }
+  
+  .home-right img {
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .home-footer {
+    padding: 1rem 2rem;
+    background-color: #fbdde0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .footer-links a {
+    color: #222;
+    text-decoration: none;
+  }
+  
