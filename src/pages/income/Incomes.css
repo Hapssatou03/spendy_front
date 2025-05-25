@@ -1,0 +1,60 @@
+.incomes-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.incomes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-btn {
+  padding: 8px 16px;
+  background-color: #f472b6;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.incomes-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.income-item {
+  background-color: #e8f9f1;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.income-info {
+  flex-grow: 1;
+}
+
+.description {
+  font-style: italic;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}

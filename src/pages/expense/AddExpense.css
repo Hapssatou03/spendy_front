@@ -1,0 +1,134 @@
+.add-expense-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: #fff6f8;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(248, 110, 143, 0.15);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.expense-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.expense-form input,
+.expense-form textarea,
+.expense-form select {
+  padding: 0.8rem;
+  border: 1px solid #ffb6c1;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.expense-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.expense-form button {
+  padding: 0.8rem;
+  background-color: #f85fa4;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.expense-form button:hover {
+  background-color: #e14d93;
+}
+
+.form-message {
+  text-align: center;
+  margin-top: 1rem;
+  color: #28a745;
+  font-weight: bold;
+}
+.category-selector {
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.category-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.category-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #f9c5d1;
+  border-radius: 12px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.category-card:hover {
+  background-color: #fff0f5;
+}
+
+.category-card input[type="radio"] {
+  margin-top: 5px;
+}
+
+.category-card.selected {
+  background-color: #fde2e6;
+  border-color: #ec4899;
+}
+.add-link {
+  color: #ec4899;
+  font-weight: bold;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.add-link:hover {
+  text-decoration: underline;
+}
+
+.inline-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #fff0f5;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.inline-form input,
+.inline-form textarea {
+  border: 1px solid #f9c5d1;
+  border-radius: 8px;
+  padding: 0.6rem;
+  font-size: 1rem;
+}
+
+.inline-form button {
+  align-self: flex-start;
+  background-color: #ec4899;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.inline-form button:hover {
+  background-color: #db2777;
+}

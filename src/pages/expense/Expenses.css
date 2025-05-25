@@ -1,0 +1,105 @@
+/* src/pages/expense/Expenses.css */
+
+/* ====== BASE ====== */
+.expenses-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2937;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #111827;
+  text-align: center;
+}
+
+/* ====== LISTE ====== */
+.expenses-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.expense-item {
+  background: linear-gradient(145deg, #f3f4f6, #ffffff);
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.expense-item:hover {
+  transform: translateY(-3px);
+}
+
+/* ====== DESCRIPTION ====== */
+.description {
+  font-style: italic;
+  color: #6b7280;
+}
+
+/* ====== ACTIONS ✏️ 🗑️ ====== */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.actions button:hover {
+  transform: scale(1.15);
+}
+
+/* ====== BOUTON + ====== */
+.add-expense-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.add-expense-button button {
+  background-color: #8b5cf6;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.3rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-expense-button button:hover {
+  background-color: #7c3aed;
+  transform: scale(1.05);
+}
+
+/* ====== ÉTATS D'AFFICHAGE ====== */
+.error {
+  color: red;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.empty-message {
+  color: #6b7280;
+  text-align: center;
+  font-style: italic;
+}

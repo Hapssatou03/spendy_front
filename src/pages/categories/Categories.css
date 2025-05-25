@@ -1,0 +1,109 @@
+/* src/pages/category/Categories.css */
+
+.categories-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  background-color: #fff0f5;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.categories-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #1f2937;
+}
+
+.message {
+  text-align: center;
+  color: #10b981;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.category-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.category-form input,
+.category-form textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #f472b6;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.category-form input:focus,
+.category-form textarea:focus {
+  border-color: #ec4899;
+}
+
+.category-form button {
+  background-color: #ec4899;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.category-form button:hover {
+  background-color: #db2777;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-item {
+  background-color: #fff;
+  border: 1px solid #fcd5ce;
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.category-item strong {
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+.category-item em {
+  font-size: 0.9rem;
+  color: #6b7280;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.3rem;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.actions button:hover {
+  transform: scale(1.2);
+}

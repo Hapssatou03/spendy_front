@@ -1,0 +1,146 @@
+body, header {
+  margin: 0;
+}
+
+
+.header {
+  background-color: white;
+  box-shadow: none;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+height: 80px;
+/* margin-top: 15px; */
+    /* height: 100px;  ou une hauteur fixe selon ton besoin 
+   overflow: hidden;  */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0rem 4rem;
+}
+.header-logo-container,
+.nav-menu,
+.header-buttons {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo + texte */
+.header-logo-container {
+   margin-left: 10px;
+  display: flex;
+  align-items: center;
+  text-decoration: none; 
+ 
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex: 1;
+  font-size: 18px;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  
+  font-size: 18px;
+}
+
+.nav-menu a, .header-buttons a {
+  line-height: 1;
+   padding-top: 2px;
+}
+/* .nav-menu a {
+  padding-top: 2px;
+} */
+
+.header-logo {
+ width: 120px;
+  height: auto;
+ 
+  transform-origin: left center; /* ancre le zoom à gauche */
+  
+}
+
+.header-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Menu principal */
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  font-weight: 500;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #6a4eff;
+}
+
+/* Bouton Connexion */
+.header-buttons .btn-cta {
+  background-color: #6a4eff;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.header-buttons .btn-cta:hover {
+  background-color: #543df2;
+}
+
+/* Menu utilisateur */
+.user-menu {
+  position: relative;
+}
+
+.user-icon {
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  list-style: none;
+  padding: 0.5rem 0;
+  z-index: 10;
+  width: 180px;
+}
+
+.dropdown li {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dropdown li:hover {
+  background-color: #f1f5f9;
+}
+

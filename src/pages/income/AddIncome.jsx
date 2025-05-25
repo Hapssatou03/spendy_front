@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useAuth } from "../context/AuthContext";
-import "../styles/components/AddIncome.css"; // assure-toi qu’il existe
+import { useAuth } from "../../context/AuthContext";
+import "./AddIncome.css"; 
 
 function AddIncome() {
   const { token } = useAuth();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -42,9 +42,9 @@ function AddIncome() {
 
   return (
     <div className="add-income-container">
-      <button onClick={() => navigate("/account")} className="btn-back">
+      {/* <button onClick={() => navigate("/account")} className="btn-back">
         ← Retour au profil
-      </button>
+      </button> */}
 
       <h2>Ajouter un revenu</h2>
       <form className="income-form" onSubmit={handleSubmit}>

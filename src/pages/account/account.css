@@ -1,0 +1,262 @@
+.account-wrapper {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #fbb6ce, #fcc4c7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 2rem 1rem;
+  }
+  
+  .account-header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d63384;
+    margin-bottom: 2rem;
+  }
+  .account-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #fce4ec, #f8bbd0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.account-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  max-width: 900px;
+  width: 100%;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.account-left {
+  flex: 1;
+  max-width: 250px;
+  text-align: center;
+}
+
+.account-avatar {
+  position: relative;
+}
+
+.avatar-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #ec4899;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(236, 72, 153, 0.3);
+}
+
+.upload-label {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #ec4899;
+  cursor: pointer;
+}
+
+.avatar-input {
+  display: none;
+}
+
+.account-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 1.2rem;
+  color: #1f2937;
+}
+
+.account-right {
+  flex: 2;
+  min-width: 300px;
+}
+
+.account-greeting {
+  font-size: 1.8rem;
+  color: #d63384;
+  margin-bottom: 1.5rem;
+}
+
+.account-info {
+  background-color: #fff7fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #fce4ec;
+  margin-bottom: 2rem;
+}
+
+.account-info p {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  color: #374151;
+}
+
+.account-info strong {
+  color: #111827;
+}
+
+.account-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-income,
+.btn-expense {
+  flex: 1;
+  text-align: center;
+  padding: 0.75rem 1.2rem;
+  border-radius: 12px;
+  font-weight: bold;
+  border: none;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-income {
+  background-color: #f472b6;
+}
+
+.btn-income:hover {
+  background-color: #ec4899;
+}
+
+.btn-expense {
+  background-color: #fb7185;
+}
+
+.btn-expense:hover {
+  background-color: #f43f5e;
+}
+
+/* Responsive version */
+@media screen and (max-width: 768px) {
+  .account-container {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .account-left {
+    max-width: 100%;
+  }
+
+  .account-right {
+    min-width: unset;
+  }
+}
+
+  .account-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .account-avatar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .account-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .account-info p {
+    font-size: 1rem;
+    color: #444;
+    margin: 0.5rem 0;
+    text-align: left;
+  }
+  
+  .account-recent {
+    margin-top: 2rem;
+    text-align: left;
+  }
+  
+  .account-recent h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #d63384;
+  }
+  
+  .account-recent ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+  }
+  
+  .account-recent li {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0.3rem;
+  }
+  /* .btn-income {
+    background-color: #f85fa4;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-income:hover {
+    background-color: #e14d93;
+  }
+   */
+
+   .account-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn-income,
+.btn-expense {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-income {
+  background-color: #f85fa4;
+}
+
+.btn-income:hover {
+  background-color: #e14d93;
+}
+
+.btn-expense {
+  background-color: #ff8d8d;
+}
+
+.btn-expense:hover {
+  background-color: #e67373;
+}

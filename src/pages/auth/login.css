@@ -1,0 +1,122 @@
+.login-page {
+  background: #faf5ff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* -------- HEADER -------- */
+.login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background: transparent;
+}
+
+.login-header .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #4a148c;
+}
+
+.login-header nav a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+}
+
+/* -------- CONTENU PRINCIPAL -------- */
+.login-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 2rem;
+  gap: 4rem;
+}
+
+.login-image img {
+  width: 320px;
+  border-radius: 12px;
+}
+
+/* -------- FORMULAIRE -------- */
+.login-form-new {
+  max-width: 400px;
+  width: 100%;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.login-form-new h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.login-form-new .subtitle {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-form-new input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn-login {
+  width: 100%;
+  background-color: #6b46c1;
+  color: white;
+  padding: 1rem;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  background-color: #5a35b1;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.register-link a {
+  color: #9f2df4;
+  font-weight: bold;
+}
+
+/* -------- FOOTER -------- */
+.login-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.login-footer a {
+  margin: 0 1rem;
+  color: #666;
+  text-decoration: none;
+}

@@ -2,8 +2,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../../context/AuthContext";
-import AuthSwitcher from "../../components/AuthSwitcher"; // Permet de changer entre login/register
-import "../../styles/components/login.css"; //
+import "./login.css";
+import loginIllustration from "../../assets/login-illustration.png";
+
 function Login() {
   const navigate = useNavigate();
   const { login } = useAuth();
@@ -12,21 +13,15 @@ function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  // 🔐 Connexion à l'API backend
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        "http://localhost:6415/api/auth/login",
-        {
-          email,
-          password,
-        }
-      );
-      const token = response.data.token;
-      login(token); // Stocke le token + met à jour le contexte utilisateur
+      const response = await axios.post("http://localhost:6415/api/auth/login", {
+        email,
+        password,
+      });
+      login(response.data.token);
       navigate("/account");
-;
     } catch (err) {
       console.error(err);
       setError("Email ou mot de passe incorrect");
@@ -34,36 +29,55 @@ function Login() {
   };
 
   return (
-    <div className="login-container">
-      <form onSubmit={handleLogin} className="login-form">
-        <h2 className="title">Connexion</h2>
+    <div className="login-page">
+      
 
-        {error && <p className="error-message">{error}</p>}
+      <div className="login-content">
+        <div className="login-image">
+          {/* Remplacez le chemin par l'image appropriée */}
+          <img src={loginIllustration} alt="Femme utilisant son téléphone" />
 
-        <label>Email</label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Votre adresse email"
-          required
-        />
+       
+        </div>
 
-        <label>Mot de passe</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Votre mot de passe"
-          required
-        />
+        <form className="login-form-new" onSubmit={handleLogin}>
+          <h1>Connectez-vous à votre compte</h1>
+          <p className="subtitle">
+            Gérer vos finances n’a jamais été aussi simple. Reprenez le contrôle.
+          </p>
 
-        <button type="submit" className="submit-button">
-          Se connecter
-        </button>
+          {error && <p className="error-message">{error}</p>}
 
-        <AuthSwitcher />
-      </form>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+
+          <input
+            type="password"
+            placeholder="Mot de passe"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+
+          <div className="checkbox-row">
+            <input type="checkbox" id="remember" />
+            <label htmlFor="remember">Se souvenir de moi</label>
+          </div>
+
+          <button type="submit" className="btn-login">Connexion</button>
+
+          <p className="register-link">
+            Pas de compte ? <a href="#">Inscrivez-vous</a>
+          </p>
+        </form>
+      </div>
+
+      
     </div>
   );
 }
