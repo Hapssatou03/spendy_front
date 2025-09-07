@@ -6,7 +6,7 @@ import { useAuth } from "../context/AuthContext";
 import logo from "../assets/logo.png";
 import { FaRegUser } from "react-icons/fa";
 
-import "./Header.css";
+import "./header.css";
 
 function Header() {
   const navigate = useNavigate();
