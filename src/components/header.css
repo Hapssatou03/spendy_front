@@ -27,7 +27,7 @@ header {
   align-items: center;
 }
 
-/* Logo + texte */
+
 .header-logo-container {
   margin-left: 10px;
   display: flex;
@@ -55,10 +55,6 @@ header {
   line-height: 1;
   padding-top: 2px;
 }
-/* .nav-menu a {
-  padding-top: 2px;
-} */
-
 .header-logo {
   width: 160px;
   height: auto;
@@ -72,7 +68,7 @@ header {
   color: #333;
 }
 
-/* Menu principal */
+
 .nav-menu {
   display: flex;
   gap: 2rem;
@@ -89,7 +85,6 @@ header {
   color: #6a4eff;
 }
 
-/* Bouton Connexion */
 .header-buttons .btn-cta {
   background-color: #6a4eff;
   color: white;
@@ -104,10 +99,10 @@ header {
   background-color: #543df2;
 }
 
-/* Menu utilisateur */
+
 .user-menu {
   position: relative;
-  margin-left: auto; /* pousse vers la droite */
+  margin-left: auto; 
 }
 
 .user-icon {
@@ -203,7 +198,7 @@ header {
   border-radius: 3px;
   transition: all 0.3s ease;
 }
-/* ================= RESPONSIVE HEADER ================== */
+
 @media (max-width: 768px) {
   .nav-menu,
   .header-buttons {
@@ -245,12 +240,12 @@ header {
     transition: all 0.3s ease;
   }
 
-  /* Empêche le menu de se compresser */
+  
   .header-container {
-    flex-wrap: wrap; /*  3. Réorganisation verticale des éléments*/
+    flex-wrap: wrap; 
   }
 
-  .nav-menu a, /* 4. Adaptation des liens dans le menu mobile*/
+  .nav-menu a, 
 .header-buttons a {
     padding: 0.6rem 1rem;
     text-align: center;
@@ -260,21 +255,10 @@ header {
     border-radius: 10px;
   }
   .header-buttons .btn-cta {
-    /*5. Taille et style du bouton Connexion en mobile*/
+   
     background-color: #6a4eff;
     padding: 0.5rem 1.2rem;
     border-radius: 10px;
     font-weight: 600;
   }
 }
-
-/*Responsive
-1. Hamburger menu visible uniquement en mobile
- 2. Menu principal caché en mobile sauf si ouvert
-  3. Réorganisation verticale des éléments 
-   4. Adaptation des liens dans le menu mobile
-   5. Taille et style du bouton Connexion en mobile
-
-
-    J’ai implémenté un système responsive simple avec des media queries. En dessous de 768px, le menu devient caché et un bouton hamburger s’affiche. Quand on clique dessus, le menu se déploie verticalement avec des boutons plus adaptés au tactile. J’ai aussi prévu une réorganisation du layout avec flex-wrap pour éviter les débordements. 
-*/

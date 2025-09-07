@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import "./Footer.css";
+import "./footer.css";
 
 const Footer = () => {
   const { isAuthenticated } = useAuth();
