@@ -1,0 +1,94 @@
+.about-page {
+  padding: 4rem;
+  background:  #f8f4ff;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+
+.intro-section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.about-logo {
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.intro-section h1 {
+  font-size: 2.5rem;
+  color: #5e2bff;
+}
+
+.intro-section p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.vision-section,
+.team-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.text-block {
+  flex: 1;
+  min-width: 250px;
+}
+
+.about-img {
+  flex: 1;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(94, 43, 255, 0.1);
+}
+
+.about-img.round {
+  border-radius: 50%;
+  max-width: 500px; 
+  width: 100%;
+  height: auto;
+}
+
+
+@media (max-width: 768px) {
+  .about-page {
+    padding: 2rem 1rem;
+  }
+
+  .intro-section h1 {
+    font-size: 2rem;
+  }
+
+  .intro-section p {
+    font-size: 1rem;
+  }
+
+  .vision-section,
+  .team-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .text-block {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .about-img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .about-img.round {
+    max-width: 250px;
+  }
+}

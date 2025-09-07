@@ -1,0 +1,83 @@
+.premium-page {
+  background-color: #faf5ff;
+  min-height: 100vh;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.premium-content {
+  max-width: 1000px;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(106, 78, 255, 0.15);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.premium-text {
+  flex: 1 1 350px;
+}
+
+.premium-text h1 {
+  font-size: 2.5rem;
+  color: #6a4eff;
+  margin-bottom: 1rem;
+}
+
+.premium-text p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.premium-text .highlight {
+  font-weight: bold;
+  color: #9f2df4;
+}
+
+.premium-image {
+  flex: 1 1 350px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 16px;
+}
+
+/*  TABLETTES */
+@media (max-width: 992px) {
+  .premium-text h1 {
+    font-size: 2rem;
+  }
+
+  .premium-text p {
+    font-size: 1.1rem;
+  }
+}
+
+/*  MOBILES */
+@media (max-width: 600px) {
+  .premium-content {
+    flex-direction: column-reverse;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .premium-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .premium-text p {
+    font-size: 1rem;
+  }
+
+  .premium-image {
+    max-width: 100%;
+  }
+}

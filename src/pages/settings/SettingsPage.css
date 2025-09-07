@@ -1,0 +1,38 @@
+.settings-wrapper {
+  display: flex;
+  max-width: 900px;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.settings-menu {
+  width: 200px;
+  background-color: #f7f0ff;
+  padding: 1rem;
+}
+
+.settings-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.settings-menu li {
+  padding: 0.7rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.settings-menu li:hover,
+.settings-menu .active {
+  background-color: #e0d2f5;
+  font-weight: bold;
+}
+
+.settings-content {
+  flex: 1;
+  padding: 2rem;
+}

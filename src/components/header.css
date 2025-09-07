@@ -1,7 +1,7 @@
-body, header {
+body,
+header {
   margin: 0;
 }
-
 
 .header {
   background-color: white;
@@ -9,10 +9,7 @@ body, header {
   position: sticky;
   top: 0;
   z-index: 1000;
-height: 80px;
-/* margin-top: 15px; */
-    /* height: 100px;  ou une hauteur fixe selon ton besoin 
-   overflow: hidden;  */
+  height: 120px;
 }
 
 .header-container {
@@ -21,7 +18,7 @@ height: 80px;
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  padding: 0rem 4rem;
+  padding: 0rem 1rem;
 }
 .header-logo-container,
 .nav-menu,
@@ -32,11 +29,10 @@ height: 80px;
 
 /* Logo + texte */
 .header-logo-container {
-   margin-left: 10px;
+  margin-left: 10px;
   display: flex;
   align-items: center;
-  text-decoration: none; 
- 
+  text-decoration: none;
 }
 
 .nav-menu {
@@ -50,24 +46,24 @@ height: 80px;
 .header-buttons {
   display: flex;
   align-items: center;
-  
+
   font-size: 18px;
 }
 
-.nav-menu a, .header-buttons a {
+.nav-menu a,
+.header-buttons a {
   line-height: 1;
-   padding-top: 2px;
+  padding-top: 2px;
 }
 /* .nav-menu a {
   padding-top: 2px;
 } */
 
 .header-logo {
- width: 120px;
+  width: 160px;
   height: auto;
- 
-  transform-origin: left center; /* ancre le zoom à gauche */
-  
+
+  transform-origin: left center;
 }
 
 .header-title {
@@ -111,9 +107,11 @@ height: 80px;
 /* Menu utilisateur */
 .user-menu {
   position: relative;
+  margin-left: auto; /* pousse vers la droite */
 }
 
 .user-icon {
+  margin-top: 30px;
   font-size: 1.6rem;
   background: none;
   border: none;
@@ -132,6 +130,9 @@ height: 80px;
   padding: 0.5rem 0;
   z-index: 10;
   width: 180px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .dropdown li {
@@ -144,3 +145,136 @@ height: 80px;
   background-color: #f1f5f9;
 }
 
+.header {
+  background-color: #e2deff;
+}
+.user-menu,
+.admin-menu {
+  position: relative;
+}
+
+.user-icon {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.dropdown {
+  position: absolute;
+  top: 140%;
+  right: 0;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  min-width: 160px;
+  z-index: 100;
+}
+
+.dropdown li {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.dropdown li:hover {
+  background-color: #f3f3f3;
+  color: #9747ff;
+  font-weight: 500;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  margin-left: auto;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+/* ================= RESPONSIVE HEADER ================== */
+@media (max-width: 768px) {
+  .nav-menu,
+  .header-buttons {
+    display: none;
+  }
+
+  .nav-menu.show-mobile,
+  .header-buttons.show-mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    z-index: 999;
+  }
+
+  .hamburger {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    background: none;
+    border: none;
+    padding: 0;
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  .bar {
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  /* Empêche le menu de se compresser */
+  .header-container {
+    flex-wrap: wrap; /*  3. Réorganisation verticale des éléments*/
+  }
+
+  .nav-menu a, /* 4. Adaptation des liens dans le menu mobile*/
+.header-buttons a {
+    padding: 0.6rem 1rem;
+    text-align: center;
+    width: auto;
+    min-width: 140px;
+    margin: 0.3rem auto;
+    border-radius: 10px;
+  }
+  .header-buttons .btn-cta {
+    /*5. Taille et style du bouton Connexion en mobile*/
+    background-color: #6a4eff;
+    padding: 0.5rem 1.2rem;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+}
+
+/*Responsive
+1. Hamburger menu visible uniquement en mobile
+ 2. Menu principal caché en mobile sauf si ouvert
+  3. Réorganisation verticale des éléments 
+   4. Adaptation des liens dans le menu mobile
+   5. Taille et style du bouton Connexion en mobile
+
+
+    J’ai implémenté un système responsive simple avec des media queries. En dessous de 768px, le menu devient caché et un bouton hamburger s’affiche. Quand on clique dessus, le menu se déploie verticalement avec des boutons plus adaptés au tactile. J’ai aussi prévu une réorganisation du layout avec flex-wrap pour éviter les débordements. 
+*/

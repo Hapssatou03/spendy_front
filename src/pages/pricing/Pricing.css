@@ -1,0 +1,112 @@
+.pricing-page {
+  padding: 4rem;
+  background: #f8f4ff;
+  min-height: 100vh;
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.pricing-title {
+  font-size: 2.8rem;
+  color: #5e2bff;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: #5e2bffcc;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(94, 43, 255, 0.1);
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  color: #5e2bff;
+}
+
+.price {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: #222;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.card ul li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.btn-filled {
+  background-color: #5e2bff;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-outline {
+  border: 2px solid #5e2bff;
+  background: transparent;
+  color: #5e2bff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.btn-outline {
+  border: 2px solid #6a4eff;
+  color: #6a4eff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: #6a4eff;
+  color: white;
+}
+
+.btn-filled {
+  background-color: #6a4eff;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-filled:hover {
+  background-color: #543df2;
+}

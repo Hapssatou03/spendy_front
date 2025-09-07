@@ -3,10 +3,10 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import "./AddExpense.css"; // Réutilisation du style
+import "./AddExpense.css"; 
 
 const EditExpense = () => {
-  const { id } = useParams(); // 🔁 Récupère l’ID depuis l’URL
+  const { id } = useParams(); // Récupère l’ID depuis l’URL
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -133,7 +133,7 @@ const EditExpense = () => {
           ))}
         </select>
 
-        <button type="submit">💾 Enregistrer</button>
+        <button type="submit"> Enregistrer</button>
         {message && <p className="form-message">{message}</p>}
       </form>
     </div>

@@ -1,0 +1,27 @@
+.legal-page {
+  padding: 4rem;
+  max-width: 900px;
+  margin: auto;
+  background-color: #faf7ff;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+
+.legal-page h1 {
+  color: #5e2bff;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.legal-page h2 {
+  color: #5e2bff;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.legal-page p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+

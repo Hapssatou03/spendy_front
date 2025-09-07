@@ -1,12 +1,13 @@
 import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../../context/AuthContext";
-import "./AddIncome.css"; 
+import { toast } from "react-toastify";
+import "./AddIncome.css";
 
 function AddIncome() {
   const { token } = useAuth();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -32,56 +33,76 @@ function AddIncome() {
       await axios.post("http://localhost:6415/api/incomes", formData, {
         headers: { Authorization: `Bearer ${token}` },
       });
-      setSuccessMsg("✅ Revenu ajouté avec succès !");
-      setFormData({ name: "", amount: "", date: "", description: "" });
+
+      // Redirection après succès :
+      toast.success("💸 Revenu ajouté avec succès !");
+      setTimeout(() => {
+        navigate("/incomes");
+      }, 1000);
     } catch (err) {
-      setErrorMsg("❌ Erreur lors de l’ajout du revenu.");
+      setErrorMsg(" Erreur lors de l’ajout du revenu.");
       console.error(err);
     }
   };
 
   return (
-    <div className="add-income-container">
-      {/* <button onClick={() => navigate("/account")} className="btn-back">
-        ← Retour au profil
-      </button> */}
+    <div className="add-income-wrapper">
+      <form className="add-income-form" onSubmit={handleSubmit}>
+        <h2>Ajouter un revenu</h2>
 
-      <h2>Ajouter un revenu</h2>
-      <form className="income-form" onSubmit={handleSubmit}>
-        <input
-          type="number"
-          name="amount"
-          placeholder="Montant"
-          value={formData.amount}
-          onChange={handleChange}
-          required
-        />
+        <div className="input-group">
+          <span className="icon"></span>
+          <input
+            type="number"
+            name="amount"
+            placeholder="Montant (€)"
+            value={formData.amount}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-        <input
-          type="date"
-          name="date"
-          value={formData.date}
-          onChange={handleChange}
-          required
-        />
+        <div className="input-group">
+          <span className="icon"></span>
+          <input
+            type="date"
+            name="date"
+            value={formData.date}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-        <select name="name" value={formData.name} onChange={handleChange} required>
-          <option value="">Source</option>
-          <option value="Salaire">Salaire</option>
-          <option value="Allocation">Allocation</option>
-          <option value="Vente">Vente</option>
-          <option value="Autre">Autre</option>
-        </select>
+        <div className="input-group">
+          <span className="icon"></span>
+          <select
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          >
+            <option value="">Source</option>
+            <option value="Salaire">Salaire</option>
+            <option value="Allocation">Allocation</option>
+            <option value="Vente">Vente</option>
+            <option value="Autre">Autre</option>
+          </select>
+        </div>
 
-        <input
-          type="text"
-          name="description"
-          placeholder="Description"
-          value={formData.description}
-          onChange={handleChange}
-        />
+        <div className="input-group">
+          <span className="icon"></span>
+          <input
+            type="text"
+            name="description"
+            placeholder="Note ou description"
+            value={formData.description}
+            onChange={handleChange}
+          />
+        </div>
 
-        <button type="submit">Valider</button>
+        <button className="submit-btn" type="submit">
+          ➕ Ajouter le revenu
+        </button>
 
         {(successMsg || errorMsg) && (
           <div className="form-message">

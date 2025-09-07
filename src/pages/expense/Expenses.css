@@ -1,105 +1,143 @@
-/* src/pages/expense/Expenses.css */
-
-/* ====== BASE ====== */
 .expenses-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #1f2937;
+  padding: 3rem 1rem;
+  background-color: #faf8ff;
 }
 
 h2 {
   font-size: 2rem;
+  text-align: left;
+  color: #4c1d95;
   margin-bottom: 1.5rem;
-  color: #111827;
+}
+
+.add-expense-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.add-expense-button {
+  background: linear-gradient(to right, #a855f7, #9333ea);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  min-width: 180px;
+  display: inline-block;
   text-align: center;
 }
 
-/* ====== LISTE ====== */
+
+.add-expense-button:hover {
+  transform: scale(1.05);
+}
+
+.month-group {
+  margin-bottom: 2.5rem;
+}
+
+.month-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f3e8ff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #4c1d95;
+  box-shadow: 0 2px 8px rgba(160, 32, 240, 0.05);
+  margin-bottom: 1rem;
+}
+
+.total {
+  color: #9333ea;
+}
+
 .expenses-list {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.expense-item {
-  background: linear-gradient(145deg, #f3f4f6, #ffffff);
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  padding: 1.2rem 1.5rem;
-  margin-bottom: 1.2rem;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
-.expense-item:hover {
-  transform: translateY(-3px);
+.expense-row {
+  background: white;
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 6px 16px rgba(160, 32, 240, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* ====== DESCRIPTION ====== */
-.description {
-  font-style: italic;
+.expense-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.expense-name {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #111827;
+}
+
+.expense-date {
+  font-size: 0.9rem;
   color: #6b7280;
 }
 
-/* ====== ACTIONS ✏️ 🗑️ ====== */
-.actions {
+.expense-right {
   display: flex;
-  justify-content: flex-end;
-  gap: 0.8rem;
-  margin-top: 0.5rem;
+  align-items: center;
+  gap: 1rem;
 }
 
-.actions button {
+.expense-amount {
+  color: #ef4444;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.expense-actions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.edit-btn,
+.delete-btn {
   background: none;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  color: #7c3aed;
+  transition: color 0.2s ease;
 }
 
-.actions button:hover {
-  transform: scale(1.15);
+.edit-btn:hover {
+  color: #4f46e5;
 }
 
-/* ====== BOUTON + ====== */
-.add-expense-button {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+.delete-btn:hover {
+  color: #dc2626;
 }
 
-.add-expense-button button {
-  background-color: #8b5cf6;
-  color: white;
-  border: none;
-  padding: 0.9rem 1.3rem;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 50px;
-  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.add-expense-button button:hover {
-  background-color: #7c3aed;
-  transform: scale(1.05);
-}
-
-/* ====== ÉTATS D'AFFICHAGE ====== */
 .error {
   color: red;
   text-align: center;
-  margin: 1rem 0;
+  margin-top: 2rem;
 }
 
 .empty-message {
-  color: #6b7280;
   text-align: center;
+  color: #6b7280;
   font-style: italic;
+  margin-top: 2rem;
 }

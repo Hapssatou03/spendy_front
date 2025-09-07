@@ -1,71 +1,190 @@
-/* styles/components/register.css */
+/* ----- PAGE REGISTER SPENDY ----- */
 
 .register-container {
-    @apply min-h-screen flex items-center justify-center p-4;
-    background-color: #FCC4C7; /* 🌸 Rose Spendy */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #faf5ff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.register-form {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  width: 100%;
+  max-width: 500px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0 1rem;
+  background: #fff;
+  height: 48px;
+  margin-bottom: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-wrapper input {
+  flex: 1;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #1a1a1a;
+  padding-left: 0.75rem;
+}
+
+.input-wrapper input::placeholder {
+  color: #aaa;
+}
+
+.input-wrapper input:focus {
+  outline: none;
+}
+
+.input-wrapper:has(input:focus) {
+  border-color: #9f2df4;
+  box-shadow: 0 0 0 2px rgba(159, 45, 244, 0.2);
+}
+
+.input-icon {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.input-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.input-row .input-wrapper {
+  flex: 1;
+  margin-bottom: 0;
+  min-width: 0;
+}
+
+.legal-check {
+  font-size: 0.875rem;
+  color: #444;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.legal-check input[type="checkbox"] {
+  margin-top: 0.2rem;
+}
+
+.link {
+  color: #9f2df4;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.3rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #9f2df4, #6b46c1);
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(90deg, #6b46c1, #9f2df4);
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.switch-auth {
+  text-align: center;
+  font-size: 0.875rem;
+  margin-top: 1.5rem;
+  color: #444;
+}
+
+.error-message {
+  text-align: center;
+  color: #e11d48;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+/* ==================== RESPONSIVE ===================== */
+@media (max-width: 600px) {
+  .register-container {
+    padding: 1rem;
   }
-  
-  
+
   .register-form {
-    @apply bg-white rounded-lg shadow-lg p-8 w-full max-w-md;
+    padding: 2rem 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   }
-  
+
   .title {
-    @apply text-2xl font-bold text-center mb-6;
+    font-size: 1.5rem;
   }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  input[type="date"],
-  input[type="tel"] {
-    @apply w-full p-2 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pink-400;
+
+  .subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
   }
-  
-  .legal-check {
-    @apply text-sm text-gray-700 mb-4 flex items-start gap-2;
+
+  .input-row {
+    flex-direction: column;
+    gap: 0.8rem;
   }
-  
-  .legal-check input[type="checkbox"] {
-    @apply mt-1;
-  }
-  
-  .link {
-    @apply text-pink-600 hover:underline;
-  }
-  
+
   .submit-button {
-    padding: 12px 32px;
-    background-color: #F85FA4;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    border: 2px solid #cc4a8e;
-    border-radius: 9999px;
-    margin: 0 auto;              /* Centre horizontalement */
-    display: block;              /* Nécessaire avec auto margin */
-    width: fit-content;          /* Adapte à la taille du contenu */
-    transition: background-color 0.2s ease;
-    box-shadow: none !important; /* Supprime effet 3D */
-    transform: none !important;  /* Supprime le déplacement */
+    font-size: 1rem;
+    padding: 0.75rem;
   }
-  
-  .submit-button:hover {
-    background-color: #e14d93;
+
+  .legal-check {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .submit-button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+
+  .link {
+    display: inline-block;
+    margin-top: 0.3rem;
   }
-  
-  
-  
-  .switch-auth {
-    @apply text-center text-sm mt-4;
-  }
-  
-  .error-message {
-    @apply text-red-500 text-sm mb-4 text-center;
-  }
-  
+}

@@ -1,0 +1,234 @@
+.admin-dashboard {
+  padding: 2rem;
+  background:  white;
+  min-height: 100vh;
+}
+.admin-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #1f1f1f;
+}
+.admin-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.admin-header h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.icon-cog {
+  font-size: 1.5rem;
+  color: #7c3aed;
+}
+
+/* ==================== CONTENU ==================== */
+.admin-users-wrapper {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.admin-header h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.admin-content {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ==================== TABLE UTILISATEURS ==================== */
+
+.admin-users {
+  flex: 2;
+   background: rgb(243, 227, 248); 
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.admin-users table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* 🔥 Permet de fixer les largeurs */
+}
+
+.admin-users th,
+.admin-users td {
+  text-align: left;
+  padding: 0.8rem;
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+/* 💡 Répartition automatique des colonnes */
+.admin-users th:nth-child(4),
+.admin-users td:last-child {
+  width: 30%;
+  text-align: center; /* 💡 Centré au lieu de aligner à droite */
+  padding-right: 1rem;
+}
+
+.admin-users td:last-child {
+  text-align: right; /* 🔥 Aligne les boutons à droite */
+}
+
+.admin-users tr {
+  border-bottom: 1px solid #eee;
+}
+
+/* ==================== BOUTONS ==================== */
+
+.btn-edit,
+.btn-delete,
+.btn-toggle {
+  margin: 0 4px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.btn-edit {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.btn-delete {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.reactivate {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.deactivate {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+/* ==================== STATISTIQUES ==================== */
+
+.admin-stats {
+  flex: 1;
+  background: rgb(243, 227, 248); 
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart-placeholder {
+  background-color: #fff6ff;
+  border-radius: 20px;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.chart-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #5c2d91;
+  margin-bottom: 1rem;
+}
+
+.donut-wrapper {
+  width: 100%;
+  height: 300px;
+  max-width: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.chart-placeholder canvas {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.admin-title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+margin: 2rem 0 1.5rem 0;
+  
+}
+
+.admin-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f1f1f;
+}
+@media screen and (max-width: 1200px) {
+  .admin-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .admin-users,
+  .admin-stats {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .admin-stats {
+    margin-top: 2rem;
+  }
+
+  .chart-placeholder {
+    max-width: 90%;
+  }
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+@media screen and (max-width: 768px) {
+  .button-group {
+    justify-content: center;
+  }
+
+  .btn-edit,
+  .btn-delete,
+  .btn-toggle {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+}
+

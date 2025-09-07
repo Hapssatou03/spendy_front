@@ -1,118 +1,93 @@
+/* ===== CSS ADD EXPENSE REFONTE SPENDY ===== */
 .add-expense-container {
-  max-width: 500px;
-  margin: 2rem auto;
-  background: #fff6f8;
+  max-width: 420px;
+  margin: 3rem auto;
+  background: #fef9fc;
   padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 0 12px rgba(248, 110, 143, 0.15);
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(159, 45, 244, 0.1);
   font-family: 'Segoe UI', sans-serif;
+}
+
+.add-expense-container h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: #1a1a1a;
 }
 
 .expense-form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
-.expense-form input,
-.expense-form textarea,
-.expense-form select {
-  padding: 0.8rem;
-  border: 1px solid #ffb6c1;
-  border-radius: 8px;
+.input-group {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #e4d2f4;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+}
+
+.input-group input,
+.input-group textarea {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: transparent;
+  padding-left: 0.75rem;
+  color: #1a1a1a;
+}
+
+.input-icon {
+  color: #9f2df4;
   font-size: 1rem;
 }
 
-.expense-form textarea {
+textarea {
   resize: vertical;
   min-height: 80px;
 }
 
-.expense-form button {
+select {
   padding: 0.8rem;
-  background-color: #f85fa4;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.expense-form button:hover {
-  background-color: #e14d93;
-}
-
-.form-message {
-  text-align: center;
-  margin-top: 1rem;
-  color: #28a745;
-  font-weight: bold;
-}
-.category-selector {
-  margin-bottom: 1rem;
-}
-
-.section-title {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.category-options {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.category-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  padding: 0.75rem 1rem;
-  border: 1px solid #f9c5d1;
+  border: 1px solid #e4d2f4;
   border-radius: 12px;
-  background-color: #fff;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  font-size: 1rem;
+  background-color: white;
 }
 
-.category-card:hover {
-  background-color: #fff0f5;
-}
-
-.category-card input[type="radio"] {
-  margin-top: 5px;
-}
-
-.category-card.selected {
-  background-color: #fde2e6;
-  border-color: #ec4899;
-}
 .add-link {
-  color: #ec4899;
+  color: #9f2df4;
   font-weight: bold;
-  margin-top: -0.5rem;
-  margin-bottom: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
+  margin-top: -0.5rem;
+  transition: color 0.3s ease;
 }
 
 .add-link:hover {
   text-decoration: underline;
+  color: #7a19cc;
 }
 
 .inline-form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  background-color: #fff0f5;
+  background-color: #f7eaff;
   padding: 1rem;
-  border-radius: 12px;
+  border-radius: 16px;
   margin-bottom: 1rem;
 }
 
 .inline-form input,
 .inline-form textarea {
-  border: 1px solid #f9c5d1;
+  border: 1px solid #e6c4f9;
   border-radius: 8px;
   padding: 0.6rem;
   font-size: 1rem;
@@ -120,15 +95,50 @@
 
 .inline-form button {
   align-self: flex-start;
-  background-color: #ec4899;
+  background-color: #9f2df4;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 9999px;
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .inline-form button:hover {
-  background-color: #db2777;
+  background-color: #7e1bd4;
+}
+
+.expense-form button[type="submit"] {
+  padding: 0.9rem 2rem;
+  background: linear-gradient(90deg, #9f2df4, #6b46c1);
+  color: white;
+  font-weight: bold;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.3s ease;
+  width: fit-content;
+  align-self: center;
+}
+
+.expense-form button[type="submit"]:hover {
+  background: linear-gradient(90deg, #6b46c1, #9f2df4);
+}
+
+.form-message {
+  text-align: center;
+  margin-top: 1rem;
+  color: #28a745;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 480px) {
+  .add-expense-container {
+    margin: 1.5rem;
+    padding: 1.5rem;
+  }
 }

@@ -1,50 +1,80 @@
 .incomes-container {
-  padding: 2rem;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
+  padding: 3rem 1rem;
+  background-color: #faf8ff;
 }
 
 .incomes-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2rem;
+}
+
+.incomes-header h2 {
+  font-size: 1.8rem;
+  color: #333;
 }
 
 .add-btn {
-  padding: 8px 16px;
-  background-color: #f472b6;
-  border: none;
-  border-radius: 8px;
+  background: linear-gradient(to right, #a855f7, #9333ea);
   color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 999px;
   font-weight: bold;
+  font-size: 1rem;
   cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.add-btn:hover {
+  transform: scale(1.05);
 }
 
 .incomes-list {
   list-style: none;
   padding: 0;
-  margin-top: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
 }
 
 .income-item {
-  background-color: #e8f9f1;
-  border-radius: 12px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(to right, #f3e8ff, #ede9fe);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(160, 32, 240, 0.08);
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.income-item:hover {
+  transform: translateY(-4px);
 }
 
 .income-info {
   flex-grow: 1;
+  color: #4b0082;
 }
 
-.description {
+.income-info strong {
+  font-size: 1.2rem;
+  color: #6b21a8;
+}
+
+.income-info .description {
   font-style: italic;
-  color: #555;
-  margin-top: 0.5rem;
+  color: #6b7280;
+  margin-top: 0.3rem;
+}
+
+.income-info .date {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin-top: 0.2rem;
 }
 
 .actions {
@@ -53,8 +83,20 @@
 }
 
 .actions button {
-  background: none;
+  background-color: transparent;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   cursor: pointer;
+  color: #6b21a8;
+  transition: color 0.2s ease;
+}
+
+.actions button:hover {
+  color: #9333ea;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 2rem;
 }

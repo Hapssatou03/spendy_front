@@ -10,42 +10,40 @@ const Categories = () => {
 
   const token = localStorage.getItem("token");
 
-  // 🔁 Charger toutes les catégories
+  // 🔁 Charger uniquement les catégories du user connecté
   const fetchCategories = async () => {
     try {
-      const res = await axios.get("http://localhost:6415/api/categories", {
+      const res = await axios.get("http://localhost:6415/api/categories/me", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCategories(res.data);
-    } catch {
+    } catch (err) {
+      console.error("Erreur chargement catégories :", err);
       setMessage("Erreur de chargement des catégories.");
     }
   };
 
   useEffect(() => {
-    fetchCategories();
-  }, []);
+    if (token) {
+      fetchCategories();
+    }
+  }, [token]);
 
-  // 🔄 Mise à jour des champs
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // 💾 Ajouter ou modifier une catégorie
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       if (editingId) {
-        // 🔁 Modifier
         await axios.put(`http://localhost:6415/api/categories/${editingId}`, formData, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setMessage("Catégorie modifiée !");
       } else {
-        // ➕ Ajouter
-        const userId = JSON.parse(atob(token.split('.')[1])).userId; // ou récup via `/me`
+        const userId = JSON.parse(atob(token.split('.')[1])).userId;
         await axios.post("http://localhost:6415/api/categories", { ...formData, userId }, {
           headers: { Authorization: `Bearer ${token}` },
         });
@@ -55,18 +53,22 @@ const Categories = () => {
       setFormData({ name: "", description: "" });
       setEditingId(null);
       fetchCategories();
-    } catch {
+    } catch (err) {
+      console.error("Erreur création catégorie :", err);
       setMessage("Erreur lors de l’enregistrement.");
     }
   };
 
-  // ✏️ Préparer modification
   const startEdit = (cat) => {
     setFormData({ name: cat.name, description: cat.description || "" });
     setEditingId(cat.id);
   };
 
-  // 🗑️ Supprimer une catégorie
+  const handleCancelEdit = () => {
+    setEditingId(null);
+    setFormData({ name: "", description: "" });
+  };
+
   const handleDelete = async (id) => {
     if (!window.confirm("Supprimer cette catégorie ?")) return;
     try {
@@ -74,7 +76,8 @@ const Categories = () => {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchCategories();
-    } catch {
+    } catch (err) {
+      console.error("Erreur suppression catégorie :", err);
       setMessage("Erreur lors de la suppression.");
     }
   };
@@ -100,9 +103,16 @@ const Categories = () => {
           placeholder="Description (facultative)"
           onChange={handleChange}
         />
-        <button type="submit">
-          {editingId ? "💾 Modifier" : "➕ Ajouter"}
-        </button>
+        <div className="form-buttons">
+          <button type="submit">
+            {editingId ? "💾 Modifier" : "➕ Ajouter"}
+          </button>
+          {editingId && (
+            <button type="button" onClick={handleCancelEdit} className="cancel-btn">
+              ❌ Annuler
+            </button>
+          )}
+        </div>
       </form>
 
       <ul className="category-list">

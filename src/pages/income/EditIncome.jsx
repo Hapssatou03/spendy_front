@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import "./AddIncome.css"; 
+import "./AddIncome.css";
 
 const EditIncome = () => {
-  const { id } = useParams(); // ← on récupère l'id depuis l'URL
+  const { id } = useParams();
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -16,7 +16,6 @@ const EditIncome = () => {
 
   const [message, setMessage] = useState("");
 
-  // Charger les données du revenu existant
   useEffect(() => {
     const token = localStorage.getItem("token");
     axios
@@ -63,8 +62,9 @@ const EditIncome = () => {
 
   return (
     <div className="add-income-container">
-      <h2>Modifier un revenu</h2>
       <form onSubmit={handleSubmit} className="income-form">
+        <h2 className="form-title">Modifier un revenu</h2>
+
         <input
           type="text"
           name="name"
@@ -95,7 +95,7 @@ const EditIncome = () => {
           onChange={handleChange}
         />
 
-        <button type="submit">💾 Enregistrer les modifications</button>
+        <button type="submit">Enregistrer les modifications</button>
         {message && <p className="form-message">{message}</p>}
       </form>
     </div>

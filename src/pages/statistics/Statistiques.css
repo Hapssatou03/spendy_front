@@ -1,0 +1,115 @@
+/* === PAGE GÉNÉRALE === */
+.statistiques-page {
+  padding: 2rem;
+  background: #f9f9fc;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  color: #1f2937;
+}
+
+/* === GRILLE === */
+.statistiques-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === CARD GÉNÉRIQUE === */
+.card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* === BALANCE CARD === */
+.balance-card h4 {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.balance-card h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.balance-card p {
+  margin-bottom: 1rem;
+  color: #9ca3af;
+}
+
+.balance-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.income-amount {
+  color: #6d28d9;
+}
+
+.expense-amount {
+  color: #dc2626;
+}
+
+/* === DONUT CARD === */
+.donut-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.donut-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.donut-block canvas {
+  max-width: 160px;
+  max-height: 160px;
+}
+
+/* === LÉGENDE === */
+.legend-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.legend-list li {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+/* === PLACEHOLDER BAR CHART === */
+.bar-placeholder {
+  text-align: center;
+  color: #9ca3af;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 200px;
+}
+
+
+/*responsive
+ Grille fluide avec grid-template-columns: auto-fit : chaque carte (.card) doit faire au moins 320px de large mais peut s'étirer jusqu'à remplir l'espace disponible
+Taille des éléments adaptée (max-width, margin: auto)
+Canvas responsive pour le graphique
+limites les dimensions du donut pour qu’il ne dépasse pas, même sur petit écran
+*/
