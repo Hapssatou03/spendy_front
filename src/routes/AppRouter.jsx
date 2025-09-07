@@ -25,7 +25,7 @@ import BudgetPage from "../pages/budget/BudgetPage";
 import Premium from "../pages/premium/Premium";
 
 import Header from "../components/Header";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 
 import AdminDashboard from "../pages/admin/AdminDashboard";
 import AdminRoute from "../routes/AdminRoute";
